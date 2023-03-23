@@ -92,9 +92,31 @@
                 </table>
             </div>
         </article>
+        <div class="container row d-inline d-sm-block  d-md-none  d-lg-none">
+            <input id="weight" type="text" placeholder="Add meg a mennyiséget!" required>g
+            <br>
+            <button type="button" onclick="szamol()" class="btn btn-primary">Számol!</button> 
+            <p id="eredmeny"></p>
+        </div> 
     </main>
     <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function szamol(){
+            let g =+    document.getElementById('weight').value
+            if(document.getElementById('weight').value==""){
+                document.getElementById('eredmeny').innerHTML='Nem írtál be semmit!'
+            }else if(g/1!=g){
+                document.getElementById('eredmeny').innerHTML='Nem számot írtál be!'
+            }else{
+                //console.log(g)
+                let kcal= g/100*46
+                //console.log(kcal)
+                let kcal2 = g/100*50
+                document.getElementById('eredmeny').innerHTML=kcal+ `-`+kcal2+` kcal`
+            }
+            }
+    </script>
 </body>
 
 </html>
