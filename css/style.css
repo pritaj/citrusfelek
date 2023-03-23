@@ -30,11 +30,20 @@ h3{
 
 li{
     list-style-image: url(../img/lemon2.png);
+    float: left;
+    margin-left: 40px;
 }
 
 
 td,th{
     text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+th{
+    text-transform: uppercase;
 }
 
 thead>tr:first-child{    
